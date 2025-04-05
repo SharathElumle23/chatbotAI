@@ -1,122 +1,36 @@
-/* General Styling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-/* Marquee Effect */
-.marquee {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  /* box-sizing: border-box; */
-  margin-bottom: 20px;
-}
-
-.marquee p {
-  display: inline-block;
-  padding-left: 100%;
-  animation: marquee 15s linear infinite;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
+@keyframes cloud-move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(300px); }
   }
-  50%{
-    transform: translateX(50%);
+  
+  @keyframes cat-walk {
+    0% { left: -50px; }
+    100% { left: 100%; }
   }
-  100% {
-    transform: translateX(-100%);
+  
+  @keyframes dog-walk {
+    0% { left: -60px; }
+    100% { left: 100%; }
   }
-}
-
-/* Chat Container */
-.chat-container {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.title {
-  text-align: center;
-  color: #333;
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-
-/* Chat Box */
-.chat-box {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 300px;
-  overflow-y: auto;
-}
-
-.message {
-  padding: 10px;
-  border-radius: 8px;
-  max-width: 80%;
-  margin: 5px 0;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-.message.ai {
-  background-color: #e1f5fe;
-  align-self: flex-start;
-  color: #00796b;
-}
-
-.message.user {
-  background-color: #ffeb3b;
-  align-self: flex-end;
-  color: #616161;
-}
-
-/* Chat Form */
-.chat-form {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.input-field {
-  width: 80%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1em;
-}
-
-.submit-btn {
-  width: 15%;
-  padding: 10px;
-  background-color: #00796b;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.submit-btn:hover {
-  background-color: #004d40;
-}
+  
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-cloud-move {
+    animation: cloud-move 20s linear infinite;
+  }
+  
+  .animate-cat-walk {
+    animation: cat-walk 12s linear infinite;
+  }
+  
+  .animate-dog-walk {
+    animation: dog-walk 15s linear infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce-slow 5s ease-in-out infinite;
+  }
+  
