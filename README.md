@@ -72,3 +72,7 @@ You can enhance linting by enabling type-aware rules. Example eslint.config.js:
 ├── tsconfig.json
 ├── vite.config.ts
 └── eslint.config.js
+
+![image](https://github.com/user-attachments/assets/17a9c72d-19a8-4241-a943-61375d81e140)
+
+![chatbot](https://github.com/user-attachments/assets/d32c2174-f146-4ba9-9621-af6512f551b6)
