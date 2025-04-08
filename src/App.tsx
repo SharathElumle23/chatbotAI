@@ -57,7 +57,7 @@ function App() {
     if (messages.length === 0) {
       setMessages([
         {
-          text: "🤖 Hello human. I’m Thirumalesha Bot. How can I assist you today?",
+          text: "🤖 Hello human. I’m Sharath Bot. How can I assist you today?",
           sender: "model",
         },
       ]);
@@ -87,7 +87,7 @@ function App() {
         {/* Header */}
         <div className="text-center p-4 bg-gradient-to-r from-yellow-400 to-pink-400 shadow-lg z-10 relative rounded-b-xl">
           <h1 className="text-3xl font-extrabold tracking-wide animate-glow">
-            🌐 Thirumalesha ChatBot Universe
+            🌐 Sharath ChatBot Universe
           </h1>
           <p className="text-sm mt-1">"Powered by Artificial Intelligence."</p>
         </div>
