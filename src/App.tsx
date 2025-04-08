@@ -6,7 +6,7 @@ type Message = {
   sender: "model" | "user";
 };
 
-function App() {
+const App = () => {
   const [newInputValue, setNewInputValue] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -145,6 +145,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;
