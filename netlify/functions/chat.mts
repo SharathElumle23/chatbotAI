@@ -88,7 +88,6 @@ export default async (req: Request) => {
   }
 };
 
-export const config = {
-  path: "/api/chat",
-  method: "POST",
-};
+
+// (intentionally no Netlify config export here)
+
