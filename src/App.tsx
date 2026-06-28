@@ -23,16 +23,11 @@ const App = () => {
     setNewInputValue("");
     setIsLoading(true);
 
-    const apiKey =
-      selectedModel === "gemini"
-        ? import.meta.env.VITE_GEMINI_API_KEY
-        : import.meta.env.VITE_GROQ_API_KEY;
-
     try {
       const modelText =
         selectedModel === "gemini"
-          ? await generateGeminiContent(updatedMessages, apiKey)
-          : await generateGroqContent(updatedMessages, apiKey);
+          ? await generateGeminiContent(updatedMessages)
+          : await generateGroqContent(updatedMessages);
 
       setMessages([...updatedMessages, { text: modelText, sender: "model" }]);
     } catch (err) {
