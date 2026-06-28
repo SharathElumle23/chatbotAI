@@ -76,3 +76,18 @@ You can enhance linting by enabling type-aware rules. Example eslint.config.js:
 ![image](https://github.com/user-attachments/assets/17a9c72d-19a8-4241-a943-61375d81e140)
 
 ![chatbot](https://github.com/user-attachments/assets/d32c2174-f146-4ba9-9621-af6512f551b6)
+
+## Netlify Deployment - Secrets Scanning
+
+If you encounter issues with Netlify's secrets scanning flagging `VITE_GEMINI_MODEL` as a secret, you can configure Netlify to omit this key from scanning. This is because `VITE_GEMINI_MODEL` typically holds a model identifier (e.g., "gemini-pro") and not a sensitive secret.
+
+To resolve this:
+
+1.  Go to your Netlify site settings.
+2.  Navigate to "Build & deploy" > "Environment variables".
+3.  Add a new environment variable:
+    -   **Key:** `SECRETS_SCAN_OMIT_KEYS`
+    -   **Value:** `VITE_GEMINI_MODEL`
+
+This will prevent Netlify from failing your build due to this specific environment variable.
+
