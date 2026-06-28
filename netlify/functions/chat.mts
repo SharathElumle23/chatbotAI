@@ -1,6 +1,9 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+// NOTE: We declare process so TS can compile in this repo.
+// Netlify provides process.env at runtime.
 declare const process: { env: Record<string, string | undefined> };
+
 
 
 export default async (req: Request) => {
@@ -18,8 +21,8 @@ export default async (req: Request) => {
 
 
       const genAI = new GoogleGenerativeAI(apiKey);
-      // Avoid reading any Netlify env values that could be picked up by secrets scanning.
       // Gemini model is fixed here; override via function code if you truly need dynamism.
+
       const model = genAI.getGenerativeModel(
         { model: "gemini-2.5-flash" },
         baseUrl ? { baseUrl } : undefined
